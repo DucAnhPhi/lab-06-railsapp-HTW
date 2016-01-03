@@ -11,7 +11,7 @@ class OrdersController < ApplicationController
   # GET /orders/1
   # GET /orders/1.json
   def show
-    @customer = Customer.find(params[:id])
+    
   end
 
   # GET /orders/new
