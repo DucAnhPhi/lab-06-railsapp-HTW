@@ -2,7 +2,8 @@
 
 <p>
   <strong>Customer:</strong>
-  <%= @order.customer_id %>
+  <% @customer=Customer.find(params[:id]) %>
+  <%= @customer.name %>
 </p>
 
 <p>
