@@ -6,11 +6,11 @@ describe "order page", :type => :feature do
   end
 
   it "has a create order link" do
-    visit "/orders/#{@order.id}"
+    visit "/orders"
     expect(page).to have_link 'New Order'
   end
   it "initializes new order correctly" do
-    visit "/orders/#{@order.id}"
+    visit "/orders"
     click_link 'New Order'
     fill_in 'Status', with: :new
     click_button 'Create Order'
