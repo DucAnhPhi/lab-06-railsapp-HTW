@@ -5,13 +5,11 @@ class OrdersController < ApplicationController
   # GET /orders.json
   def index
     @orders = Order.all
-
   end
 
   # GET /orders/1
   # GET /orders/1.json
   def show
-    
   end
 
   # GET /orders/new
@@ -19,9 +17,9 @@ class OrdersController < ApplicationController
     #raise params.inspect
     if params["customer"]
       @customer = Customer.find(params["customer"])
-      @order = @customer.orders.build
+      @orders = @customer.orders.build
     else
-      @order = Order.new
+      @orders = Order.new
     end
   end
 

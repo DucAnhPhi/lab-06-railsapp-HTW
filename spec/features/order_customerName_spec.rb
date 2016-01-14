@@ -2,19 +2,11 @@ require 'rails_helper'
 
 describe "order page", :type => :feature do
   before :each do
-    @order = create(:order)
+    @order = create(:order1)
   end
 
-  it "has a create order link" do
-    visit "/orders"
-    expect(page).to have_link 'New Order'
-  end
-  it "initializes new order correctly" do
-    visit "/orders"
-    click_link 'New Order'
-    fill_in 'Status', with: :new
-    click_button 'Create Order'
-    order = Order.last
-    expect(order.customer).to eq @order
+  it "shows the right name to customer_id" do
+    visit "/orders/#{@order.id}"
+    expect(page).to have_content @order.customer.name
   end
 end
