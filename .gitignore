@@ -14,3 +14,9 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+.byebug_history
+
+# Ignore Gemfile.lock as some are working under windows and we're not
+# deploying this to any test/prd systems anyway
+Gemfile.lock
