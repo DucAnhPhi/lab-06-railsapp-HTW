@@ -18,9 +18,9 @@
         <td><%= pumpkin.color %></td>
         <td><%= pumpkin.size %></td>
         <td><%= pumpkin.price %></td>
-        <td><%= link_to 'Show', pumpkin %></td>
-        <td><%= link_to 'Edit', edit_pumpkin_path(pumpkin) %></td>
-        <td><%= link_to 'Destroy', pumpkin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to (t '.show'), pumpkin %></td>
+        <td><%= link_to (t '.edit'), edit_pumpkin_path(pumpkin) %></td>
+        <td><%= link_to (t '.destroy'), pumpkin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

@@ -27,3 +27,7 @@ en:
       color: "Color"
       size: "Size"
       price: "Price"
+
+      show: "Show"
+      edit: "Edit"
+      destroy: "Destroy"

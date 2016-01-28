@@ -6,3 +6,7 @@ de:
       color: "Farbe"
       size: "Größe"
       price: "Preis"
+
+      show: "Anzeigen"
+      edit: "Bearbeiten"
+      destroy: "Löschen"
