@@ -4,10 +4,15 @@
   <strong>Customer:</strong>
   <% @customer = Customer.find(@order.customer_id)%>
   <%= @customer.name %>
-  
 
 </p>
-
+<% @line_item.each do |item| %>
+  <tr>
+    <td><%= item.empty? %></td>
+    <td><%= item.attribute_for_inspect(:orders_id) %></td>
+    <td><%= item.attribute_for_inspect(:pumpkins_id) %></td>
+    <td><%= item.attribute_for_inspect(:amount) %></td>
+    <% end %>
 <p>
   <strong>Placed on:</strong>
   <%= @order.placed_on %>
