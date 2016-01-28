@@ -20,4 +20,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  pumpkins:
+    index:
+      title: "Listing Pumpkins"
+      type: "Type"
+      color: "Color"
+      size: "Size"
+      price: "Price"

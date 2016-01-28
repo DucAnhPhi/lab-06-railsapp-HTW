@@ -1,0 +1,8 @@
+de:
+  pumpkins:
+    index:
+      title: "Liste aller Kürbisse"
+      type: "Typ"
+      color: "Farbe"
+      size: "Größe"
+      price: "Preis"

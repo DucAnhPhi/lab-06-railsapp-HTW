@@ -1,12 +1,12 @@
-<h1>Listing pumpkins</h1>
+<h1><%= t ".title" %></h1>
 
 <table>
   <thead>
     <tr>
-      <th><%= sortFunction "name", "Type" %></th>
-      <th><%= sortFunction "color", "Color" %></th>
-      <th><%= sortFunction "size", "Size" %></th>
-      <th><%= sortFunction "price", "Price" %></th>
+      <th><%= sortFunction "name", (t ".type") %></th>
+      <th><%= sortFunction "color", (t ".color") %></th>
+      <th><%= sortFunction "size", (t ".size") %></th>
+      <th><%= sortFunction "price", (t ".price") %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
