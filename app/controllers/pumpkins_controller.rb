@@ -4,7 +4,9 @@ class PumpkinsController < ApplicationController
   # GET /pumpkins
   # GET /pumpkins.json
   def index
-    @pumpkins = Pumpkin.all
+    @sortColumn = (params[:sort]) ? params[:sort] : "name"
+    @sortDirection = (params[:direction]) ? params[:direction] : "asc"
+    @pumpkins = Pumpkin.order(@sortColumn + " " + @sortDirection)
   end
 
   # GET /pumpkins/1
