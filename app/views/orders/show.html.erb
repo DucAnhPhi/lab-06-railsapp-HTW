@@ -4,7 +4,7 @@
   <strong>Customer:</strong>
   <% @customer = Customer.find(@order.customer_id)%>
   <%= @customer.name %>
-  
+
 
 </p>
 
@@ -17,6 +17,28 @@
   <strong>Status:</strong>
   <%= @order.status %>
 </p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Amount</th>
+      <th>Name</th>
+      <th>Size</th>
+      
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+  <% @line_items=LineItem.where(:order_id => @order.id)%>
+  <tbody>
+    <% @line_items.each do |item| %>
+      <tr>
+        <td><%= item.amount %></td>
+        <td><%= item.pumpkin.name %></td>
+        <td><%= item.pumpkin.size %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
 <%= link_to 'Edit', edit_order_path(@order) %> |
 <%= link_to 'Back', orders_path %>

@@ -1,4 +1,4 @@
 class LineItem < ActiveRecord::Base
-belongs_to :orders
-belongs_to :pumpkins
+belongs_to :order
+belongs_to :pumpkin
 end
