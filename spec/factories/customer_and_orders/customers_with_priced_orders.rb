@@ -1,3 +1,4 @@
+
 # some factories should be skipped to not be built twice by the db:populate task
 SKIP_FACTORIES_WHEN_POPULATING ||= []
 SKIP_FACTORIES_WHEN_POPULATING << :order_associated_and_priced
